@@ -3,11 +3,9 @@ exports.config = {
         './specs/**/*.spec.js'
     ],
     exclude: [
-        './specs/example.spec.js'
     ],
 
     maxInstances: 1,
-
     capabilities: [{
         maxInstances: 5,
         //
