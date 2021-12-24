@@ -4,7 +4,6 @@ exports.config = {
     ],
     exclude: [
     ],
-
     maxInstances: 1,
     capabilities: [{
         maxInstances: 1,
