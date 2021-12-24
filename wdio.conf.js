@@ -3,7 +3,7 @@ exports.config = {
         './specs/**/*.spec.js'
     ],
     exclude: [
-
+        './specs/example.spec.js'
     ],
 
     maxInstances: 1,
@@ -17,7 +17,7 @@ exports.config = {
 
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://kompot.us',
     waitforTimeout: 10000,
 
     connectionRetryTimeout: 30000,
