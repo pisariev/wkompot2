@@ -4,11 +4,9 @@ exports.config = {
     ],
     exclude: [
     ],
-
     maxInstances: 1,
     capabilities: [{
-        maxInstances: 5,
-        //
+        maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
