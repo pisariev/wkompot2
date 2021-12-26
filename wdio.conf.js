@@ -1,4 +1,5 @@
 const { addCommands } = require('./helpers/setup.helper');
+require('dotenv').config();
 
 exports.config = {
     specs: [

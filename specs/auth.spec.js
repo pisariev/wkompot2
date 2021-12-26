@@ -9,13 +9,13 @@ describe('Auth', function() {
     it('Successful log in', async function() {
         await expect(LoginPage.buttonSubmit)
             .toBeDisabled();
-        await LoginPage.login('ipisaryev@gmail.com', '31101967Serg');
+        await LoginPage.login(process.env.LOGIN, process.env.PASSWORD);
         await expect(ProfilePage.iconUser)
             .toBeDisplayed();
     });
 
     it('the set password is invalid ', async function() {
-        await LoginPage.login('ipisaryev@gmail.com', 'invalid');
+        await LoginPage.login(process.env.LOGIN, 'invalid');
         await expect(LoginPage.notification).toHaveTextContaining('Incorrect password')
     });
 
@@ -37,4 +37,4 @@ describe('Auth', function() {
         await LoginPage.inputPassword.smartClear();
         await expect(LoginPage.passwordValidation).toHaveTextContaining('Required');
     });
-});
+})
