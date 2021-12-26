@@ -4,7 +4,7 @@ import ClientsPage from '../pages/clients.page';
 import faker from 'faker';
 
 describe('Client', function() {
-    let email
+    let email;
 
     before(async function() {
         await LoginPage.open();
