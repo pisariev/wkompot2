@@ -23,6 +23,7 @@ exports.config = {
     services: ['devtools'],
     reporters: ['spec'],
     framework: 'mocha',
+
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
