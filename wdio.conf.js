@@ -1,3 +1,5 @@
+const { addCommands } = require('./helpers/setup.helper');
+
 exports.config = {
     specs: [
         './specs/**/*.spec.js'
@@ -10,21 +12,23 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
-
     logLevel: 'info',
     bail: 0,
     baseUrl: 'https://kompot.us',
-    waitforTimeout: 10000,
 
+    waitforTimeout: 10000,
     connectionRetryTimeout: 30000,
     connectionRetryCount: 1,
 
     services: ['devtools'],
-    framework: 'mocha',
     reporters: ['spec'],
-
+    framework: 'mocha',
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
     },
+
+    before: async function (capabilities, specs, browser) {
+        await addCommands();
+    }
 }
